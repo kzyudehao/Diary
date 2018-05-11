@@ -1,9 +1,0 @@
-package com.focus.jdbc.chap09.sec03;
-
-public class Demo01 {
-	
-	
-	public static void main(String[] args) {
-		
-	}
-}

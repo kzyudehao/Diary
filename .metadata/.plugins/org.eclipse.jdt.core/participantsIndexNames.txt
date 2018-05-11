@@ -1,9 +1,0 @@
-INDEX VERSION 1.127
-D:\workspace1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1402477287.index
-\Diary\src
-D:\workspace1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\310752474.index
-\Diary\src
-D:\workspace1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2872637141.index
-\Diary\src
-D:\workspace1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4175575422.index
-\Diary\src

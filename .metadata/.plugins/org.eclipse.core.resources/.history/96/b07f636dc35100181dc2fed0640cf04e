@@ -1,9 +1,0 @@
-package com.xp.model;
-
-public class DiaryType {
-	
-	private int diaryTypeId;
-	private String typeName;
-	private int diaryTypeCount;
-	
-}
