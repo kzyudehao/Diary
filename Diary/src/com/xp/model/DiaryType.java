@@ -25,5 +25,13 @@ public class DiaryType {
 	public void setDiaryTypeCount(int diaryTypeCount) {
 		this.diaryTypeCount = diaryTypeCount;
 	}
+	public DiaryType(String typeName) {
+		super();
+		this.typeName = typeName;
+	}
+	public DiaryType() {
+		super();
+	}
+	
 	
 }

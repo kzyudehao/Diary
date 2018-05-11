@@ -11,7 +11,7 @@ public class PropertiesUtil {
 	 * @param key
 	 * @return
 	 */
-	public String getValue(String key){
+	public static String getValue(String key){
 		
 		Properties pro = new Properties();
 		

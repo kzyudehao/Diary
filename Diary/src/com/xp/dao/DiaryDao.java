@@ -105,6 +105,13 @@ public class DiaryDao {
 		return diaryCountList;
 	}
 	
+	/**
+	 * 获取日志详情
+	 * @param con
+	 * @param diaryId
+	 * @return
+	 * @throws Exception
+	 */
 	public Diary getDiaryInfo(Connection con,String diaryId) throws Exception{
 		Diary diary = new Diary();
 		StringBuffer sb = new StringBuffer("select * from t_diary t1,t_diarytype t2 where t1.typeId = t2.diaryTypeId and t1.diaryId=?");
@@ -123,5 +130,71 @@ public class DiaryDao {
 		
 	}
 	
+	/**
+	 * 添加日志
+	 * @param con
+	 * @param diary
+	 * @return
+	 * @throws Exception
+	 */
+	public int addDiary(Connection con ,Diary diary) throws Exception{
+		String sql = "insert into t_diary values(null,?,?,?,now())";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, diary.getTitle());
+		ps.setString(2, diary.getContent());
+		ps.setInt(3, diary.getTypeId());
+		return ps.executeUpdate();
+	}
+	
+	/**
+	 * 删除日志
+	 * @param con
+	 * @param diaryId
+	 * @return
+	 * @throws Exception
+	 */
+	public int deleteDiary(Connection con ,String diaryId) throws Exception{
+		String sql = "delete from t_diary where diaryId = ?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, diaryId);
+		return ps.executeUpdate();
+		
+	}
+	
+	/**
+	 * 修改日志
+	 * @param con
+	 * @param diary
+	 * @return
+	 * @throws Exception
+	 */
+	public int updateDiary(Connection con,Diary diary) throws Exception{
+		String sql="update t_diary set title=?,content=?,typeId=? where diaryId=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, diary.getTitle());
+		ps.setString(2, diary.getContent());
+		ps.setInt(3, diary.getTypeId());
+		ps.setInt(4, diary.getDiaryId());
+		return ps.executeUpdate();
+	}
+	
+	/**
+	 * 判断日志中是否包含要删除的日志类别
+	 * @param con
+	 * @param diaryTypeId
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean existDiaryWithTypeId(Connection con ,String diaryTypeId) throws Exception{
+		String sql="select * from t_diary where typeId=? ";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, diaryTypeId);
+		ResultSet rs = ps.executeQuery();
+		if(rs.next()){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	
 }

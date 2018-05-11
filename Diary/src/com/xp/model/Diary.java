@@ -13,6 +13,14 @@ public class Diary {
 	private int diaryCount;
 	private String TypeName;
 	
+	
+	
+	public Diary(String title, String content, int typeId) {
+		super();
+		this.title = title;
+		this.content = content;
+		this.typeId = typeId;
+	}
 	public String getTypeName() {
 		return TypeName;
 	}
