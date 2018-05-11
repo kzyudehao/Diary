@@ -1,0 +1,15 @@
+package com.focus.jdbc.chap09.sec03;
+
+import com.focus.jdbc.util.DbUtil2;
+
+public class Demo01 {
+	private static DbUtil2 dbUtil = new DbUtil2();
+	
+	private static outAccount(Connection con ,String accountName,int account){
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.xp.web;
+
+public class UserServlet {
+
+}

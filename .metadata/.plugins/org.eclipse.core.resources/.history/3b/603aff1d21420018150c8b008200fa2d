@@ -1,0 +1,19 @@
+package com.focus.jdbc.chap09.sec03;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.focus.jdbc.util.DbUtil2;
+
+public class Demo01 {
+	private static DbUtil2 dbUtil = new DbUtil2();
+	
+	private static void outCount(Connection con ,String accountName,int account) throws Exception{
+		String sql = "update t_account set accountBalance = accountBalance-? where accountName = accountName ";
+		PreparedStatement ps = con.prepareStatement(sql);
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

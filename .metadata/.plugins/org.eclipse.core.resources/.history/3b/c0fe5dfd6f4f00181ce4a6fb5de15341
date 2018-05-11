@@ -1,0 +1,13 @@
+package com.xp.model;
+
+import java.util.Date;
+
+public class Diary {
+	
+	private int diaryId;
+	private String title;
+	private String content;
+	private int typeId;
+	private Date releaseDate;
+	
+}

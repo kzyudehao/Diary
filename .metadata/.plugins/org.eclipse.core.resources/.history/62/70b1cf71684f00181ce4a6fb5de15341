@@ -1,0 +1,6 @@
+package com.xp.filter;
+
+
+public class LoginFilter extends Filter {
+
+}
